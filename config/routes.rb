@@ -1,9 +1,9 @@
 SiconSite::Application.routes.draw do
   root to:  "pages#index"
 
-  get "pages/about"
+  get "pages/about", :as => "about"
 
-  get "pages/contact"
+  get "pages/contact", :as => "contact"
 
   # The priority is based upon order of creation:
   # first created -> highest priority.
