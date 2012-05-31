@@ -20,4 +20,5 @@ group :teste, :development do
 end
 
 gem 'jquery-rails'
+gem 'haml-rails'
 
