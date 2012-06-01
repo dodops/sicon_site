@@ -1,4 +1,8 @@
 SiconSite::Application.routes.draw do
+  get "members/index"
+
+  get "members/new"
+
   root to:  "pages#index"
 
   match "about", to: "pages#about"
