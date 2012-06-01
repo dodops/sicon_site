@@ -4,5 +4,6 @@ FactoryGirl.define do
   factory :member do
     name "MyString"
     bio "MyText"
+    email "dodop3000@gmail.com"
   end
 end
