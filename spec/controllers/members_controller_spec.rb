@@ -1,6 +1,8 @@
 require 'spec_helper'
 
 describe MembersController do
+  render_views
+
   describe "GET 'index'" do
     it "returns http success" do
       get 'index'
@@ -19,4 +21,5 @@ describe MembersController do
       response.should be_success
     end
   end
+
 end

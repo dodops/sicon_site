@@ -1,3 +1,4 @@
+# coding: utf-8
 class MembersController < ApplicationController
   respond_to :html, :json
 
@@ -18,6 +19,7 @@ class MembersController < ApplicationController
         flash[:notice] = "Membro adicionado com sucesso"
         wants.html { redirect_to @projects }
       else
+        flash[:alert] = "Membro não adicionado"
         wants.html { render :new }
       end
     end

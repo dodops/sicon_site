@@ -14,7 +14,7 @@ describe "PagesAndMembers" do
           visit about_path
           click_link('Conheça nossos membros')
           page.should have_content("Membros")
-          current_path.should == members.path
+          current_path.should == members_path
       end
   end
 end
