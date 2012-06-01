@@ -1,2 +1,7 @@
-%h1 Members#index
-%p Find me in app/views/members/index.html.haml
+%h1 Membros:
+
+%ul
+  = @members.each do |member|
+    %h3= member.name
+    %h4= member.bio
+    %p= member.email

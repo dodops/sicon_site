@@ -1,5 +1,5 @@
 SiconSite::Application.routes.draw do
-  get "members/index"
+  match "members", to: "members#index"
 
   get "members/new"
 
