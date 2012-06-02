@@ -11,19 +11,21 @@
     .navbar.navbar-fixed-top
       .navbar-inner
         .container
-          %button.btn.btn-navbar{"data-target" => ".nav-collapse", "data-toggle" => "collapse", :type => "button"}
+          %a.btn.btn-navbar{"data-target" => ".nav-collapse", "data-toggle" => "collapse"}
             %span.icon-bar
             %span.icon-bar
             %span.icon-bar
-          %a.brand{:href => "#"} SICON
-          .nav-collapse.collapse
+          = link_to "SICON", root_path, :class => "brand"
+          .nav-collapse
             %ul.nav
-              %li= link_to "About", about_path
-              %li= link_to "Contact", contact_path
+              %li= link_to "Principal", root_path
+              %li= link_to "Sobre", about_path
+              %li= link_to "Contato", contact_path
               %li= link_to "Membros", members_path
             %ul.nav.pull-right
               %li
                 %a{:href => "#"} Admin
 
     .container
-      = yield
+      .span10
+        = yield
