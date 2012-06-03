@@ -1,7 +1,7 @@
 %h1 Membros:
-
-%ul
-  = @members.each do |member|
-    %h3= member.name
-    %h4= member.bio
-    %p= member.email
+.span8
+  .thumbnail
+    = @members.each do |member|
+      %h3= member.name
+      %h5= member.bio
+      %p= member.email

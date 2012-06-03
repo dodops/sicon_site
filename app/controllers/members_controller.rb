@@ -2,6 +2,10 @@
 class MembersController < ApplicationController
   respond_to :html, :json
 
+  def show
+    @member = Member.find(params[:id])
+  end
+
   def index
     @members = Member.all
   end
