@@ -27,4 +27,8 @@
                 %li= link_to "Contato", contact_path
                 %li= link_to "Sobre", about_path
     .container
+      .round
+        = flash.each do |key, value|
+          = key
+          = value
       = yield
