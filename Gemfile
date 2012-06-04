@@ -3,10 +3,11 @@ source 'https://rubygems.org'
 gem 'rails', '3.2.3'
 
 
-gem 'sqlite3'
+gem 'sqlite3', :group => [:development, :test]
 
 group :production, :staging do
   gem 'pg'
+  gem 'thin'
 end
 
 
