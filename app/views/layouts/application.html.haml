@@ -28,7 +28,11 @@
                 %li= link_to "Sobre", about_path
     .container
       .round
-        = flash.each do |key, value|
-          = key
-          = value
-      = yield
+        = content_tag(:p, notice, :class => "notice") if notice.present?
+        = content_tag(:p, alert, :class => "alert") if alert.present?
+        = yield
+
+    %footer
+      .container
+        %p.pull-right
+          %a{:href => "#"} Back to top
