@@ -1,0 +1,18 @@
+.container{:style => "padding: 20px 0 0 0;"}
+  .span8
+    .thumbnail.span3
+      = image_tag @member.avatar.url(:medium)
+    .hero-unit.span4{:style => "background: #FFF; padding: 20px;"}
+      %h1= @member.name
+      %h2= @member.cargo
+      %p
+        %i.icon-map-marker
+
+    .page-hearder{:style => "clear:both;"}
+      %p
+        = @member.bio
+  .span2
+    %h2 Contato
+    %p
+      %i.icon-envelope
+      = @member.email

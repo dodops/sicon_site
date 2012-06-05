@@ -1,8 +1,8 @@
 SiconSite::Application.routes.draw do
   match "members", to: "members#index"
 
-  get "members/new"
 
+  resources :members
   root to:  "pages#index"
 
   match "about", to: "pages#about"
