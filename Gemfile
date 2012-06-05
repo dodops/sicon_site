@@ -4,10 +4,10 @@ gem 'rails', '3.2.3'
 
 
 gem 'sqlite3', :group => [:development, :test]
+gem 'thin'
 
 group :production, :staging do
   gem 'pg'
-  gem 'thin'
 end
 
 
