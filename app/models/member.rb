@@ -1,5 +1,5 @@
 class Member < ActiveRecord::Base
-  attr_accessible :bio, :name, :email, :avatar
+  attr_accessible :bio, :name, :email, :avatar, :cargo
   has_attached_file :avatar, :styles =>  {:medium => "300x300", :small => "150x150", :thumb => "100x100"}
 
   validates_presence_of :name, :bio, :email
