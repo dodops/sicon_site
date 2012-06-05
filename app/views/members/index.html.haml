@@ -1,9 +1,13 @@
-%h1 Membros:
+.topmember
+  %h1 Membros:
+
+
+
 .span8
   = @members.each do |member|
     .thumbnail.span2
       = image_tag member.avatar.url(:small)
     .heto-unit.span3
       %h3= member.name
-      %h5= member.bio
+      %h4= member.cargo
       %p= member.email
